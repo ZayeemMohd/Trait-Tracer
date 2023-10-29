@@ -1,0 +1,102 @@
+"""
+    Copyright (c) 2015-2019 Raj Patel(raj454raj@gmail.com), StopStalk
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+"""
+
+from gluon import *
+# Configure mysql server
+current.mysql_user = "root"
+current.mysql_password = "PASSWORD"
+current.mysql_server = "localhost"
+current.mysql_dbname = "stopstalkdb"
+current.mysql_uvadbname = "uvajudge"
+
+# Configure redis server
+current.redis_server = "localhost"
+current.redis_port = 6379
+
+# Configure InfluxDB server
+current.influxdb_server = "localhost"
+current.influxdb_port = 8086
+
+current.influxdb_user = "<admin_user>"
+current.influxdb_password = "<admin_password>"
+
+# Configure mail options
+current.smtp_server = "logging"
+current.sender_mail = ""
+current.sender_password = ""
+
+# Configure mail options
+current.bulk_smtp_server = "logging"
+current.bulk_sender_mail = ""
+current.bulk_sender_user = ""
+current.bulk_sender_password = ""
+
+# Google Analytics ID
+current.analytics_id = ""
+
+# Client ID for Google Calendar API
+current.calendar_token = ""
+
+# Neverbounce API username and password https://app.neverbounce.com/settings/api
+current.neverbounce_user = ""
+current.neverbounce_password = ""
+
+current.neverbounce_user2 = ""
+current.neverbounce_password2 = ""
+
+current.neverbounce_user3 = ""
+current.neverbounce_password3 = ""
+
+# Environment for running the application
+current.environment = "development"
+
+# S3 creds for user editorials
+current.s3_bucket = ""
+current.s3_access_key_id = ""
+current.s3_secret_access_key = ""
+
+current.pushover_api_token = ""
+current.pushover_user_token = ""
+
+# AWS API Gateway url for Spoj retrieval lambda function
+current.spoj_lambda_url = ""
+
+# Codechef API credentials
+current.codechef_client_id = ""
+current.codechef_client_secret = ""
+
+# codeforces request details
+current.codeforces_cookies = {}
+
+current.codeforces_headers = {}
+
+#app auth token
+current.api_tokens = []
+
+#user verification JWT secret
+current.jwt_secret = ""
+
+#gauth Credentials
+current.CLIENT_ID=""
+current.CLIENT_SECRET=""
+current.REDIRECT_URI="http://127.0.0.1:8001/default/googleauth"
+# =============================================================================

@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+{{block head}}
+  <title>{{=T("ToDo List")}}</title>
+  <meta name="description" content="Add problems to a unified ToDo list across various Competitive Programming Websites">
+  <script type="text/javascript">
+    var removeTodoURL = "{{=URL('default', 'remove_todo')}}";
+  </script>
+{{end}}
+<script type="text/javascript" src="{{=get_static_url('js/appjs/default/todo.js')}}"></script>
+<br/>
+{{=div}}

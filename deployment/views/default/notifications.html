@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+{{block head}}
+    <title>{{=T("Notifications")}}</title>
+    <meta name="description" content="List of friends on Day Streaks">
+{{end}}
+<h1>
+    {{=T("Notifications")}}
+</h1>
+<p>{{=T("Note: This list will be updated every morning when all the submissions of your friends are retrieved")}}</p>
+<div class="row">
+    <div class="col offset-s2 s8">
+        <h4>
+            {{=T("Day streak")}}
+        </h4>
+        {{=streak_table}}
+    </div>
+</div>

@@ -1,0 +1,50 @@
+{{extend 'layout.html'}}
+{{block head}}
+  <title>{{=T("Error Page")}}</title>
+  <link rel="stylesheet" href="{{=get_static_url('css/owlie.css')}}"/>
+{{end}}
+
+<br /><br />
+{{if error_message == "Not found":}}
+    <h2> {{=T("Yes you, you are lost ;)")}} </h2>
+    <div id="my-owlie">
+        <div class="owl">
+          <div class="body">
+            <div class="wing"></div>
+            <div class="wing"></div>
+            <div class="feet"></div>
+            <div class="feet right"></div>
+            <div class="feather"></div>
+          </div>
+          <div class="head">
+            <div class="eyes">
+              <div class="beak"></div>
+              <div class="eye">
+                <div class="pupil"></div>
+              </div>
+              <div class="eye">
+                <div class="pupil"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <h5>But since Owlie does give a HOOT about you</h5>
+    {{if similar_users != []:}}
+        <p> {{=T("You might be looking for")}}: |
+        {{for i in similar_users:}}
+            <a href="{{=URL('user', 'profile', args=i['stopstalk_handle'])}}" title="{{=i['name']}}"> {{=i["stopstalk_handle"]}} </a> |
+        {{pass}}
+        </p>
+    {{pass}}
+    <p> If you are trying to find a user and getting this, then try adding a <a href="{{=URL('user', 'custom_friend')}}">{{=T("Custom Friend")}}</a> and track his/her progress ! </p>
+{{elif error_message == "Invalid token":}}
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <h4> {{=T("Something is not right with the credentials!")}} </h4>
+    <p> {{=T("Please try again after some time or")}} <a href="{{=URL('default', 'contact_us')}}">Contact Us</a>.</p>
+{{else:}}
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    <h4> {{=T("Oops! There is indeed some problem here")}} </h4>
+    <p> {{=T("Please try again after some time")}} </p>
+    <p> {{=T("We have been notified and will be fixing it as soon as possible. You might get some goodies if you have found a bug in our code - please write to us if it persists!")}} </p>
+{{pass}}

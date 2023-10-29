@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+{{block head}}
+    <title>{{=T("Recent submissions") if total_rows else T("Get Started")}}</title>
+    <meta name="description" content="List of recent submissions of your friends">
+{{end}}
+<script type="text/javascript">
+    var pageURL = '{{=URL("default", "submissions")}}';
+</script>
+
+{{if total_rows:}}
+    <script src="{{=URL('static', 'js/jquery.bootpag.min.js')}}"></script>
+    <script src="{{=get_static_url('js/appjs/default/submissions.js')}}"></script>
+    <h1>{{=T("Recent submissions")}}</h1>
+    <div id="page-selection" class="center"></div>
+    <div id="content"></div>
+    {{=table}}
+{{pass}}

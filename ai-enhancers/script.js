@@ -4,7 +4,7 @@ import openai
 app = Flask(name)
 
 // Set your OpenAI GPT-3 API key here
-api_key = "YOUR_API_KEY"
+api_key = "fyhby-hhiu-bugyft"
 
 // Initialize the OpenAI API client
 openai.api_key = api_key

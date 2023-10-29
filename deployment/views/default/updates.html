@@ -1,0 +1,581 @@
+{{extend 'layout.html'}}
+{{block head}}
+    <title>{{=T("Updates")}}</title>
+    <meta name="description" content="List of important updates on StopStalk">
+{{end}}
+<h1>
+    {{=T("Updates")}}
+</h1>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Problem setters on StopStalk!
+                </span>
+                <p>
+                    You can now see the problem setters of the problems across CodeChef, CodeForces, Spoj, HackerEarth, Hackerrank and Timus. You can also view the problems authored by a particular StopStalker on their profile page.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Updates in StopStalk Rating formula
+                </span>
+                <p>
+                    We have updated our Rating formula to handle users submitting for same problem again and again. This will ensure fair leaderboards and not skew the numbers and make sure people stay motivated to code everyday on various different problems.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Editorial contributions to your Profile page
+                </span>
+                <p>
+                    We are now also counting your contributions towards writing Editorials in the calendar graph of your profile page. More reasons to contribute to the community and have a deedy profile!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Tag Search Page is now Problem Search Page
+                </span>
+                <p>
+                    We have added important filters like listing problems with editorials and name filter along with tags filter to help you find what you're looking for - {{=A("Problem Search page", _href=URL("problems", "search"))}}.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Timus added as a profile site
+                </span>
+                <p>
+                    We have now added <a href="http://acm.timus.ru" target="_blank">acm.timus.ru</a> to StopStalk. Update your Timus ID on <a href="{{=URL('user', 'update_details')}}">Update Details</a> page to get your submissions from Timus.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Users can now write editorials
+                </span>
+                <p>
+                    You can now write editorials for problems. Just open the problem page and click the Editorials button to contribute your great descriptive solutions to problems.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Heuristic submission retrieval
+                </span>
+                <p>
+                    As we scale, we are making changes into our retrieval logic and making it more based on a heuristic instead of exhaustive retrieval. Checkout our exact algorithm <a href="{{=URL('default', 'retrieval_logic')}}">here</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    List of solved / unsolved problems of a user on Profile Page
+                </span>
+                <p>
+                    Now you can see the exhaustive list of problems solved / attempted on the profile page and add them to your ToDo list or analyse your progress based on that which are also categorised with generalised tags.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    We have created a Facebook Group for discussions
+                </span>
+                <p>
+                    We can discuss issues related to StopStalk or anything related to Competitive Programming in general. Let's learn together :) - <a href="https://www.facebook.com/groups/2445127375713225/" target="_blank">Link to Facebook Group</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Update in the rating formula
+                </span>
+                <p>
+                    We have removed per day changes contribution to the rating and improved the formula to provide a more deedy number.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Instantly retrieve your submissions on StopStalk
+                </span>
+                <p>
+                    The most awaited thing that you wanted us to do - now you have a button on the profile page to retrieve your submissions instantly. Instead of waiting for 24 hours you just wait for 5 minutes ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Revamped StopStalk Navigation bar experience
+                </span>
+                <p>
+                    A lot of you guys have requested us to update the Navigation Bar icons with text - we have come up with an awesome Side Navigation Bar to help you with the text. Hope you like it :)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    View list of Custom Users of a User
+                </span>
+                <p>
+                    You can now view list of Custom users of user on the Leaderboard and User profile page. What you can do after is add that custom user as your Custom user. Cool right ? ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Generalized Tag search page
+                </span>
+                <p>
+                    We have added a filter on <a href="{{=URL('problems', 'tag')}}" target="_blank">Tag Search</a> to find you exactly the problems that you want. <br/>
+                    <b>For Example:</b> You want to solve Dynamic Programming problems - select "Dynamic Programming" and it will get you problems by clustering all the tags like dp, Dynamic Programming, dynamic-prog, dynamic-programming, etc across the sites. Happy Coding :)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Contest Rating Graph to your Profile Page
+                </span>
+                <p>
+                    One more cool graph containing all the rating graphs across the competitive programming websites to make your Profile page look deedy - Open your profile page now ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Revised StopStalk Rating Formula
+                </span>
+                <p>
+                    We have updated the StopStalk Rating Formula by reducing the weightage of per-day change to give a more generic and justified rating.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Country-wise Leaderboards
+                </span>
+                <p>
+                    On the leaderboard page click on any flag to get the leaderboard of that country :)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Problem selection made easier
+                </span>
+                <p>
+                    Now you can order the results in the tag search page according to the accuracy or the number of users who solved the problem.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Custom users no longer shown in the Leaderboards
+                </span>
+                <p>
+                    Only registered users with verified emails are part of the Leaderboards now.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Acceptance Graph added to User Profile page
+                </span>
+                <p>
+                    Now the Profile page includes an Acceptance Graph, your aim is Green :) <br/>
+                    Idea Credits: {{=A("Adnan Sharif", _href=URL("user", "profile", args="adnansharif"))}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Add problems to your ToDo List
+                </span>
+                <p>
+                    You can now add problems to your very own ToDo List. Why keep remembering the problem names and sites, just add it once and come back later ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    StopStalk can now be viewed in Russian :)
+                </span>
+                <p>
+                    We have successfully added Russian Translations - change your browser default language in case you prefer Russian over English. A special thanks to {{=A("Alisher Turubayev", _href=URL("user", "profile", args="alisher.turubayev"), _target="_blank")}} for the valuable contributions.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    View your friends at one place
+                </span>
+                <p>
+                    See a list of users who added you and also added by you on the Friends Page
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Last updated on your Profile Page
+                </span>
+                <p>
+                    We now show you when we last updated your profile (i.e retrieved your submissions) instead of leaving you anticipating ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Search problems by Profile Site name
+                </span>
+                <p>
+                    The Problem tag search page now also allows you to specify the site leading to more fine results
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    UVa Online Judge added as a profile site
+                </span>
+                <p>
+                    Now you can link your UVa account to StopStalk and get a more deedy StopStalk profile ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    More Handle details on Profile Page
+                </span>
+                <p>
+                    Now the Profile page shows if the user has invalid handles or the submissions are yet to be retrieved or the user haven't entered the handle. You may want to update the handle if you see a red chip in your Profile page ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Follower - Followed relationship among friends
+                </span>
+                <p>
+                    No more waiting for friend requests to get accepted. Add friends directly by just a click. Existing friends are
+                    maintained as it is and the friend requests converted to one-way friendship.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Crowdsourcing problem tags from users
+                </span>
+                <p>
+                    Suggest tags option added in each problem page (Look for a + button in the problem page). You can choose tags from a set of pre-defined tags. This data will be used in the recommendation engine coming soon ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Tabs instead of Switch in problem page
+                </span>
+                <p>
+                    Materialized tabs added to view submissions in a categorized fashion.
+                    <br/>
+                    My submissions | Friends' submissions | Global Submissions.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Sweet User Interface for tables
+                </span>
+                <p>
+                    All the submission tables and the contest table now show the profile site logo instead of
+                    naively mentioning the name ;)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    No separate friend request page
+                </span>
+                <p>
+                    Friend requests page is now merged with the Notifications page so that user can view the
+                    day streak and pending friend requests in same page.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    'Show tags' button instead of giving a Spoiler ;)
+                </span>
+                <p>
+                    Problem page instead of displaying the problem tags directly includes a button only on-click
+                    of which the tags are displayed.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Mark contests whose reminder is already added
+                </span>
+                <p>
+                    If you have added a reminder for a contest, then it will show a disabled button and hence save
+                    you from duplicating the reminders (Needless to say - You must have authorized StopStalk with Google)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Partially Solved Problems treated separately
+                </span>
+                <p>
+                    Instead of treating a partially solved problem as solved problem, a separate submission status is specifically introduced. Note: Already retrieved submissions are not updated but all the new submissions will be marked appropriately.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Editorial Links added
+                </span>
+                <p>
+                    Editorial Links added in the problem page. Note: This is only if the profile site actually has the editorial for that problem.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Opensearch for Chrome added
+                </span>
+                <p>
+                    Directly search for users with Google Chrome's opensearch feature -
+                    <ul>
+                        <li>Open Chrome</li>
+                        <li>Type stopstalk.com in URL bar (Don't press enter)</li>
+                        <li>Press tab and type the user you want to search ;)</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Solved and unsolved problems marked
+                </span>
+                <p>
+                    All the problems which are solved are shown as green text and those that are attempted but not solved are shown as red text.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    Localized timestamps
+                </span>
+                <p>
+                    All the submission timestamps are shown in your local timezone (Browser timezone is used internally).
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col offset-s3 s6">
+        <div class="card updates-page-card">
+            <div class="card-content white-text">
+                <span class="card-title">
+                    View / Download / Copy submission code
+                </span>
+                <p>
+                    Directly View / Download / Copy submission code from StopStalk itself. Finding a particular submission can't be easier than the Filter page :)
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

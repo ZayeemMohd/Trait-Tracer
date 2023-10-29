@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+{{block head}}
+    <title>{{=T("Friends")}}</title>
+{{end}}
+<h1>{{=T("Friends")}}</h1>
+<div class="row">
+    <div class="col offset-s1 s4 z-depth-2">
+        <h5>{{=T("You have added")}}</h5>
+        <hr>
+        {{=table1}}
+    </div>
+    <div class="col offset-s2 s4 z-depth-2">
+        <h5>{{=T("Who added you")}}</h5>
+        <hr>
+        {{=table2}}
+    </div>
+</div>
+<script src="{{=get_static_url('js/appjs/default/friends.js')}}"></script>

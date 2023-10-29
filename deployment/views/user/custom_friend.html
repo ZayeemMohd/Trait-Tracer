@@ -1,0 +1,25 @@
+{{extend 'layout.html'}}
+{{block head}}
+  <title>{{=T("Custom Friend")}}</title>
+  <meta name="description" content="Add custom user if your friend is not on StopStalk">
+{{end}}
+<h2>{{=T("Custom Friend")}}</h2>
+<p>{{=T("Have a friend who is still not on StopStalk ? We got you covered ;) - just enter his/her details and you are all set!")}}</p>
+<h6>{{=T("Allowed Custom Friends")}}: <b>{{=allowed}}</b></h6>
+<h6>{{=T("Total verified referrals")}}: <b>{{=total_referrals}}</b></h6>
+<br/>
+<div class="row">
+<div class="col offset-s1 s4 z-depth-2">
+<h5>{{=T("Add a Custom Friend")}}</h5>
+{{if form:}}
+    {{=form}}
+{{else:}}
+    <p>{{=T("You have reached the limit for creating custom friends")}}</p>
+    <p>{{=T("Refer 3 more friends to increase your limit")}}</p>
+{{pass}}
+</div>
+<div class="col offset-s1 s5 z-depth-2">
+<h5>{{=T("Update Details")}}</h5>
+{{=table}}
+</div>
+</div>
